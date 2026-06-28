@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>naav | استبيان المقابلات</title>
+<meta name="description" content="استبيان التقديم على إدارة متجر naav." />
+<link rel="icon" href="assets/logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<canvas id="bg"></canvas>
+
+<header class="topbar">
+  <div class="brand">
+    <img src="assets/logo.png" alt="naav" class="brand-logo" />
+    <span class="brand-name">naav</span>
+  </div>
+</header>
+
+<main>
+
+  <section class="apply">
+    <div class="card" id="form-card">
+
+      <div id="intro-step" class="step active">
+        <img src="assets/logo.png" alt="naav" class="intro-logo" />
+        <h2>استبيان المقابلات</h2>
+        <p class="muted">جاوب على كل سؤال بصدق ودقة. بعد الإرسال راجع رسائلك الخاصة في ديسكورد لمعرفة النتيجة.</p>
+        <button class="btn btn-primary" id="start-btn">بدء التقديم</button>
+      </div>
+
+      <div id="loading-step" class="step">
+        <div class="spinner"></div>
+        <p class="muted">جاري تحميل الاستبيان…</p>
+      </div>
+
+      <form id="app-form" class="step">
+        <div class="progress-track">
+          <div class="progress-fill" id="progress-fill"></div>
+        </div>
+        <div id="questions-wrap"></div>
+
+        <div class="form-nav">
+          <button type="button" class="btn btn-ghost" id="prev-btn">السابق</button>
+          <button type="button" class="btn btn-primary" id="next-btn">التالي</button>
+          <button type="submit" class="btn btn-primary" id="submit-btn" hidden>إرسال الطلب</button>
+        </div>
+        <p class="error-msg" id="error-msg"></p>
+      </form>
+
+      <div id="success-step" class="step">
+        <div class="success-icon">✓</div>
+        <h2>تم إرسال طلبك بنجاح</h2>
+        <p class="muted">تابع رسائلك الخاصة في ديسكورد، الإدارة سترد عليك بالقبول أو الرفض.</p>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <span>© <span id="year"></span> naav — جميع الحقوق محفوظة</span>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>

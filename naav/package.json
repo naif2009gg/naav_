@@ -1,0 +1,9 @@
+{
+  "name": "naav-application-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "موقع تقديم إدارة naav مع بوت ديسكورد للقبول والرفض",
+  "dependencies": {
+    "discord-interactions": "^3.4.0"
+  }
+}
